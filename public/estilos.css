@@ -1,0 +1,275 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --main-font: 'Source Sans Pro', 'sans-serif';
+        --secondary-font: 'Herr Von Muellerhoff', cursive;
+        --body-font: 'Cabin', sans-serif;
+        --main-font-color-dark: #252525;
+        --secondary-font-color: #fff;
+        --body-font-color: #515151;
+    }
+    
+    body {
+        background: #FAFAFA;
+    }
+    /*  MENU*/
+    
+    header {
+        height: 80px;
+        background: #002648;
+        color: #fff;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: fixed;
+        z-index: 95;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    
+    header h3 {
+        margin-right: 250px;
+    }
+    
+    #btn-menu {
+        display: none;
+    }
+    
+    header label {
+        font-size: 40px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    .menu ul {
+        background: #002648;
+        display: flex;
+        margin: auto;
+        list-style: none;
+    }
+    
+    .menu ul ul {
+        display: none;
+    }
+    
+    .menu ul ul a {
+        color: #fff;
+    }
+    
+    .menu ul ul a:hover {
+        color: #fff;
+    }
+    
+    .menu a {
+        display: block;
+        padding: 15px 10px;
+        text-decoration: none;
+        font-family: "work Sans", sans-serif;
+        font-size: 13px;
+    }
+    
+    .menu a:hover {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+    }
+    
+    .menu a span {
+        margin-left: 10px;
+    }
+    
+    .menu ul li:hover ul {
+        display: block;
+        position: absolute;
+    }
+    
+    .menu .primero {
+        color: #fff;
+    }
+    
+    .menu .primero::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+    }
+    
+    .menu .primero:hover {
+        color: #fff;
+    }
+    
+    .menu .segundo {
+        color: #fff;
+    }
+    
+    .menu .segundo::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 3px;
+        background: #fff;
+        -webkit-transition: width .6s;
+        transition: width .6s;
+    }
+    
+    .menu .segundo:hover::after {
+        width: 100%;
+        -webkit-transition: width .6s;
+    }
+    
+    .menu .segundo:hover {
+        color: #fff;
+    }
+    
+    .menu .tercero {
+        color: #fff;
+    }
+    
+    .menu .tercero::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 3px;
+        background: #fff;
+        -webkit-transition: width .6s;
+        transition: width .6s;
+    }
+    
+    .menu .tercero:hover::after {
+        width: 100%;
+        -webkit-transition: width .6s;
+        transition: width .6s;
+    }
+    
+    .menu .tercero:hover {
+        color: #fff;
+    }
+    
+    .menu .cuarto {
+        color: #fff;
+    }
+    
+    .menu .cuarto::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 3px;
+        background: #fff;
+        -webkit-transition: width .6s;
+        transition: width .6s;
+    }
+    
+    .menu .cuarto:hover::after {
+        width: 100%;
+        -webkit-transition: width .6s;
+        transition: width .6s;
+    }
+    
+    .menu .cuarto:hover {
+        color: #fff;
+    }
+    
+    .banner {
+        width: 100%;
+        height: 100vh;
+        background: #24C6DC;
+        background: -webkit-linear-gradient(to right, rgba(80, 73, 156, 0.767), hsla(187, 72%, 50%, 0.747)), url(../img/colegio.jpg);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, hsla(245, 36%, 45%, 0.644), hsla(187, 72%, 50%, 0.671)), url(../img/colegio.jpg);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        z-index: 80;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-position: center;
+    }
+    
+    .container-banner {
+        width: 100%;
+        max-width: 122.5rem;
+        margin: 0 auto;
+        padding: 0 2.4rem;
+        margin-top: 100px;
+    }
+    
+    .titulo-banner {
+        font-size: 8.5rem;
+        font-family: var(--secondary-font);
+        color: var(--secondary-font-color);
+        font-weight: 100;
+        line-height: .4;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .subtitulo-banner {
+        color: #fff;
+        font-size: 2.7rem;
+        font-family: var(--main-font);
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: .5rem;
+        margin-right: .5rem;
+    }
+    
+    @media screen and (max-width:768px) {
+        header label {
+            display: block;
+        }
+        .menu {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            transform: translateX(-100%);
+            transition: all 0.3s;
+        }
+        .menu a {
+            color: #fff;
+            font-family: 'Open Sans', sans-serif;
+            padding: 20px;
+            font-size: 16px;
+        }
+        .menu ul {
+            display: block;
+            background: #002648;
+        }
+        .menu ul li:hover ul {
+            display: none;
+            position: static;
+        }
+        .menu a span {
+            position: absolute;
+        }
+        #btn-menu:checked~.menu {
+            transform: translateX(0%);
+        }
+        .menu ul ul {
+            background: rgb(0, 0, 0, 0.4);
+        }
+        .menu ul ul a {
+            padding: 15px 40px;
+        }
+        .menu .primero {
+            color: #fff;
+        }
+        .menu .segundo {
+            color: #fff;
+        }
+        .menu .tercero {
+            color: #fff;
+        }
+        .menu .cuarto {
+            color: #fff;
+        }
+    }
